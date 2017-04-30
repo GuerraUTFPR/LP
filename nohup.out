@@ -1,0 +1,108 @@
+High Performance MPEG 1.0/2.0/2.5 Audio Player for Layers 1, 2 and 3
+	version 1.22.4; written and copyright by Michael Hipp and others
+	free software (LGPL) without any warranty but with best wishes
+
+Playing MPEG stream 1 of 1: Dead Space Brilha Brilha Estrelinha.mp3 ...
+
+MPEG 1.0 layer III, 128 kbit/s, 44100 Hz joint-stereo
+High Performance MPEG 1.0/2.0/2.5 Audio Player for Layers 1, 2 and 3
+	version 1.22.4; written and copyright by Michael Hipp and others
+	free software (LGPL) without any warranty but with best wishes
+
+[readers.c:1182] error: Cannot open file Dead: No such file or directory
+
+[mpg123.c:634] error: Cannot open Dead: File access error. (code 22)
+
+[readers.c:1182] error: Cannot open file Space: No such file or directory
+
+[mpg123.c:634] error: Cannot open Space: File access error. (code 22)
+
+[readers.c:1182] error: Cannot open file Brilha: No such file or directory
+
+[mpg123.c:634] error: Cannot open Brilha: File access error. (code 22)
+
+[readers.c:1182] error: Cannot open file Brilha: No such file or directory
+
+[mpg123.c:634] error: Cannot open Brilha: File access error. (code 22)
+
+[readers.c:1182] error: Cannot open file Estrelinha.mp3: No such file or directory
+
+[mpg123.c:634] error: Cannot open Estrelinha.mp3: File access error. (code 22)
+High Performance MPEG 1.0/2.0/2.5 Audio Player for Layers 1, 2 and 3
+	version 1.22.4; written and copyright by Michael Hipp and others
+	free software (LGPL) without any warranty but with best wishes
+
+[readers.c:1182] error: Cannot open file Dead: No such file or directory
+
+[mpg123.c:634] error: Cannot open Dead: File access error. (code 22)
+
+[readers.c:1182] error: Cannot open file Space: No such file or directory
+
+[mpg123.c:634] error: Cannot open Space: File access error. (code 22)
+
+[readers.c:1182] error: Cannot open file Brilha: No such file or directory
+
+[mpg123.c:634] error: Cannot open Brilha: File access error. (code 22)
+
+[readers.c:1182] error: Cannot open file Brilha: No such file or directory
+
+[mpg123.c:634] error: Cannot open Brilha: File access error. (code 22)
+
+[readers.c:1182] error: Cannot open file Estrelinha.mp3: No such file or directory
+
+[mpg123.c:634] error: Cannot open Estrelinha.mp3: File access error. (code 22)
+High Performance MPEG 1.0/2.0/2.5 Audio Player for Layers 1, 2 and 3
+	version 1.22.4; written and copyright by Michael Hipp and others
+	free software (LGPL) without any warranty but with best wishes
+
+[readers.c:1182] error: Cannot open file Dead: No such file or directory
+
+[mpg123.c:634] error: Cannot open Dead: File access error. (code 22)
+
+[readers.c:1182] error: Cannot open file Space: No such file or directory
+
+[mpg123.c:634] error: Cannot open Space: File access error. (code 22)
+
+[readers.c:1182] error: Cannot open file Brilha: No such file or directory
+
+[mpg123.c:634] error: Cannot open Brilha: File access error. (code 22)
+
+[readers.c:1182] error: Cannot open file Brilha: No such file or directory
+
+[mpg123.c:634] error: Cannot open Brilha: File access error. (code 22)
+
+[readers.c:1182] error: Cannot open file Estrelinha.mp3: No such file or directory
+
+[mpg123.c:634] error: Cannot open Estrelinha.mp3: File access error. (code 22)
+High Performance MPEG 1.0/2.0/2.5 Audio Player for Layers 1, 2 and 3
+	version 1.22.4; written and copyright by Michael Hipp and others
+	free software (LGPL) without any warranty but with best wishes
+
+[readers.c:1182] error: Cannot open file Dead: No such file or directory
+
+[mpg123.c:634] error: Cannot open Dead: File access error. (code 22)
+
+[readers.c:1182] error: Cannot open file Space: No such file or directory
+
+[mpg123.c:634] error: Cannot open Space: File access error. (code 22)
+
+[readers.c:1182] error: Cannot open file Brilha: No such file or directory
+
+[mpg123.c:634] error: Cannot open Brilha: File access error. (code 22)
+
+[readers.c:1182] error: Cannot open file Brilha: No such file or directory
+
+[mpg123.c:634] error: Cannot open Brilha: File access error. (code 22)
+
+[readers.c:1182] error: Cannot open file Estrelinha.mp3: No such file or directory
+
+[mpg123.c:634] error: Cannot open Estrelinha.mp3: File access error. (code 22)
+0.mp3
+1.mp3
+comandos.sh
+Ex1_LP_RB.rb
+graphviz.txt
+nohup.out
+teste.json
+teste.txt
+Trabalho_1_LP_Guerra.rb

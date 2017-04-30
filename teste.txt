@@ -1,0 +1,6 @@
+voce acorda no meio da noite, chove muito forte. Sua casa aparentemente não tem ninguém|
+[1] abir a janela;não parece uma boa ideia;nenhum
+[2] Sair do quarto;Você sai do quarto;sala_1
+
+
+

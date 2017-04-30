@@ -1,0 +1,33 @@
+[
+{
+	"nome": "entrada",
+	"descricao": "voce acorda no meio da noite, chove muito forte. Sua casa aparentemente não tem ninguém",
+	"opcao": [
+    	{	"comando": "1.Abrir a janela",
+			"resultado": "Não parece ser uma boa idéia, vai molhar tudo!",
+		 	"chave": "nenhum"
+		 },
+	 	{	"comando": "2.Sair do quarto",
+			"resultado": "Você sai do quarto",
+			"chave": "sala_1"
+		}
+			 ]	
+	
+},
+
+{
+	"nome": "sala_1",
+	"descricao": "vc está no corredor, esta muito escuro",
+	"opcao": [
+    	{	"comando": "1.voltar para o quarto",
+			"resultado": "a porta se trancou!",
+		 	"chave": "nenhum"
+		 },
+	 	{	"comando": "2.acender a luz",
+			"resultado": "voce acende a luz",
+			"chave": "nenhum"
+		}
+			 ]	
+	
+}
+]
