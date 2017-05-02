@@ -1,7 +1,7 @@
 [
 {
 	"nome": "entrada",
-	"descricao": "voce acorda no meio da noite, chove muito forte. Sua casa aparentemente não tem ninguém",
+	"descricao": "É madrugada e está chovendo muito forte, muitos trovões e relampagos, você está no seu quarto dormindo e acorda com um grito muito alto...",
 	"opcao": [
     	{	"comando": "1.Abrir a janela",
 			"resultado": "Não parece ser uma boa idéia, vai molhar tudo!",
@@ -9,25 +9,381 @@
 		 },
 	 	{	"comando": "2.Sair do quarto",
 			"resultado": "Você sai do quarto",
-			"chave": "sala_1"
+			"chave": "corredor_apagado"
+		},
+		{	"comando": "3.Voltar a dormir",
+			"resultado": "Você tenta deitar novamente mas está pertubado demais para dormir.",
+			"chave": "nenhum"
 		}
 			 ]	
 	
 },
 
 {
-	"nome": "sala_1",
-	"descricao": "vc está no corredor, esta muito escuro",
+	"nome": "corredor_apagado",
+	"descricao": "Você está no corredor, as luzes estão apagadas e está estranhamente frio. Você se pergunta o que está acontecendo, quem gritou? será que alguém da sua familia teve um pesadelo?...",
 	"opcao": [
     	{	"comando": "1.voltar para o quarto",
-			"resultado": "a porta se trancou!",
+			"resultado": "O QUE!? COMO ASSIM?! a porta se trancou!",
 		 	"chave": "nenhum"
 		 },
-	 	{	"comando": "2.acender a luz",
+		{	"comando": "2.Sentar e chorar",
+			"resultado": "NÃO! tenho que ser corajoso!",
+		 	"chave": "nenhum"
+		 },
+	 	{	"comando": "3.acender a luz",
 			"resultado": "voce acende a luz",
+			"chave": "corredor_aceso"
+		}
+			 ]	
+	
+},
+
+{
+	"nome": "corredor_aceso",
+	"descricao": "Agora a luz está acesa, todas as portas estão encostadas e as escadas estão de dar arrepios de tão escura, NÃO PARECE UMA BOA IDÉIA TENTAR DESCER...",
+	"opcao": [
+    	{	"comando": "1.Entrar no banheiro",
+			"resultado": "Você abre a porta e entra no banheiro...",
+		 	"chave": "banheiro"
+		 },
+		{	"comando": "2.Entrar no quarto dos pais",
+			"resultado": "Você abre vagarosamente a porta e entra no quarto...",
+		 	"chave": "quarto_pais"
+		 },
+	 	{	"comando": "3.Entrar no quarto do irmão",
+			"resultado": "você abre a porta e entra no quarto",
+			"chave": "quarto_irmao"
+		},
+		{	"comando": "4.Descer as escadas",
+			"resultado": "Você caiu tentando descer as escadas",
+			"chave": "fim_morte"
+		}
+			 ]	
+	
+},
+
+{
+	"nome": "banheiro",
+	"descricao": "O banheiro está extremamente frio e mórbido, você não aguentaria ficar por muito tempo nele...",
+	"opcao": [
+    	{	"comando": "1.Voltar para o corredor",
+			"resultado": "Você voltou para o corredor...",
+		 	"chave": "corredor_aceso"
+		}
+			 ]
+},
+
+{
+	"nome": "quarto_pais",
+	"descricao": "O quarto está com rastros de sangue, você não acha os seus pais. MAS O QUE ESTÁ ACONTECENDO, o pânico começa a tomar conta de você...",
+	"opcao": [
+    	{	"comando": "1.Ligar para a policia",
+			"resultado": "O telefone está sem linha...",
+		 	"chave": "nenhum"
+		 },
+		{	"comando": "2.Entrar no banheiro do quarto",
+			"resultado": "A porta está trancada, você bate mas ninguém responde...",
+		 	"chave": "nenhum"
+		 },
+	 	{	"comando": "3.Sair do quarto",
+			"resultado": "você sai do quarto",
+			"chave": "corredor_aceso"
+		}	
+			]	
+	
+},
+
+{
+	"nome": "quarto_irmao",
+	"descricao": "O seu irmão está agachado e chorando no canto do quarto, está com muito medo. Será que ele sabe de algo? Tudo está muito estranho...",
+	"opcao": [
+    	{	"comando": "1.Conversar com o irmão",
+			"resultado": "O seu irmão está muito apavorado para falar, mas decide te acompanhar",
+		 	"chave": "nenhum"
+		 },
+		{	"comando": "2.Pedir para o seu irmão te beliscar",
+			"resultado": "Você aparentemente não está sonhando...",
+		 	"chave": "nenhum"
+		 },
+	 	{	"comando": "3.Procurar uma lanterna e sair do quarto",
+			"resultado": "você encontrou uma lanterna e sai do quarto",
+			"chave": "corredor_escadas"
+		}	
+			]	
+	
+},
+
+{
+	"nome": "corredor_escadas",
+	"descricao": "Ao sair do quarto de seu irmão, a porta se fecha violentamente nas costas de vocês",
+	"opcao": [
+    	{	"comando": "1.Entrar no banheiro",
+			"resultado": "Você abre a porta e entra no banheiro...",
+		 	"chave": "banheiro"
+		 },
+		{	"comando": "2.Entrar no quarto dos pais",
+			"resultado": "Ué a porta está trancada",
+		 	"chave": "nenhum"
+		 },
+	 	{	"comando": "3.Entrar no quarto do irmão",
+			"resultado": "Como isso é possível? a porta trancou-se",
+			"chave": "nenhum"
+		},
+		{	"comando": "4.Descer as escadas",
+			"resultado": "Você desce as escadas e chega a sala de estar",
+			"chave": "sala_estar"
+		}
+			 ]	
+	
+},
+
+{
+	"nome": "sala_estar",
+	"descricao": "A sala está com a televisão ligada e sem sinal, você acende a luz...",
+	"opcao": [
+    	{	"comando": "1.Desligar a TV",
+			"resultado": "Você desliga a TV...",
+		 	"chave": "nenhum"
+		 },
+		{	"comando": "2.Entrar na cozinha",
+			"resultado": "você entra na cozinha",
+		 	"chave": "cozinha"
+		 },
+	 	{	"comando": "3.Entrar na garagem",
+			"resultado": "Seu irmão pede para ir a cozinha",
+			"chave": "nenhum"
+		},
+		{	"comando": "4.Sair da casa",
+			"resultado": "A porta está trancada",
 			"chave": "nenhum"
 		}
 			 ]	
 	
+},
+
+{
+	"nome": "cozinha",
+	"descricao": "A cozinha está toda limpa, parece que ninguém passou por aqui. Seu irmão quer a arma de água que ele deixou em cima do armário...",
+	"opcao": [
+    	{	"comando": "1.Comer algo",
+			"resultado": "Você não está com fome..",
+		 	"chave": "nenhum"
+		 },
+		{	"comando": "2.Pegar a arma de água e sair da cozinha",
+			"resultado": "você entrega a arma pra volta para a sala.",
+		 	"chave": "sala_estar2"
+		 }
+	 
+			 ]	
+	
+},
+
+{
+	"nome": "sala_estar2",
+	"descricao": "Você escuta um barulho muito alto, parece vir do andar de cima...",
+	"opcao": [    	
+		{	"comando": "1.Entrar na cozinha",
+			"resultado": "Não há mais nada na cozinha",
+		 	"chave": "nenhum"
+		 },
+	 	{	"comando": "2.Entrar na garagem",
+			"resultado": "você entra na garagem",
+			"chave": "garagem"
+		},
+		{	"comando": "3.Sair da casa",
+			"resultado": "A porta está trancada",
+			"chave": "nenhum"
+		}
+			 ]	
+	
+},
+
+{
+	"nome": "garagem",
+	"descricao": "Os carros está na garagem, o que será que aconteceu com seus pais? será um bandido? você e seu irmão começam a temer pelo pior. Você sabe que o seu pai guarda armas na garagem. O QUE??? Você e seu irmão sente algo ou alguém passando rápidamente pelas costas de vocês...",
+	"opcao": [
+    	{	"comando": "1.Olhar para trás!",
+			"resultado": "Não há nada",
+		 	"chave": "nenhum"
+		 },
+		{	"comando": "2.Pegar um fuzil AK-47",
+			"resultado": "É muito grande! melhor outra arma...",
+		 	"chave": "nenhum"
+		 },
+	 	{	"comando": "3.Pegar uma sub-metralhadora",
+			"resultado": "Está sem munição, melhor outra arma",
+			"chave": "nenhum"
+		},
+		{	"comando": "4.Fugir com o carro",
+			"resultado": "você não encontra as chaves...",
+			"chave": "nenhum"
+		},
+		{	"comando": "5.Pegar a pistola e voltar para a sala",
+			"resultado": "você carrega a pistola com munições e volta para a sala",
+			"chave": "sala_estar3"
+		}
+			 ]	
+	
+},
+
+{
+	"nome": "sala_estar3",
+	"descricao": "Você escuta novamente um barulho muito alto...",
+	"opcao": [    	
+		{	"comando": "1.Entrar na cozinha",
+			"resultado": "Não há mais nada na cozinha",
+		 	"chave": "nenhum"
+		 },
+	 	{	"comando": "2.Entrar na garagem",
+			"resultado": "não faz sentido voltar a garagem",
+			"chave": "nenhum"
+		},
+		{	"comando": "3.Sair da casa",
+			"resultado": "A porta está trancada",
+			"chave": "nenhum"
+		},
+		{	"comando": "4.Subir as escadas",
+			"resultado": "você e seu irmão sobe as escadas...",
+			"chave": "corredor_2"
+		}
+		
+			 ]	
+	
+},
+
+{
+	"nome": "corredor_2",
+	"descricao": "Ao chegar novamente no corredor, você vê sua lanterna piscando... ficou sem pilhas, o mais estranho é que uma névoa escura tomou conta da escadaria, não seria prudente descer por elas novamente por enquanto...",
+	"opcao": [
+    	{	"comando": "1.Entrar no banheiro",
+			"resultado": "Você abre a porta e entra no banheiro...",
+		 	"chave": "banheiro_2"
+		 },
+		{	"comando": "2.Entrar no quarto dos pais",
+			"resultado": "a porta ainda está trancada",
+		 	"chave": "nenhum"
+		 },
+	 	{	"comando": "3.Entrar no quarto do irmão",
+			"resultado": "porta trancada...",
+			"chave": "nenhum"
+		},
+		{	"comando": "4.Descer as escadas",
+			"resultado": "Você desce e algo puxa você e seu irmão com muita força para baixo...",
+			"chave": "fim_morte"
+		}
+			 ]	
+	
+},
+
+{
+	"nome": "banheiro_2",
+	"descricao": "O banheiro está muito frio ainda mas...parece que há algo de estranho na parede, está escorrendo muito sangue pela parede.",
+	"opcao": [
+    	{	"comando": "1.Olhar no espelho",
+			"resultado": "Você olha no espelho e ve o rosto de seu irmão coberto de sangue...",
+		 	"chave": "nenhum"
+		 },
+		{	"comando": "2.Se aproximar da parede",
+			"resultado": "vocês se aproximam da parede e...",
+		 	"chave": "banheiro_3"
+		 }	 
+			 ]	
+	
+},
+{
+	"nome": "banheiro_3",
+	"descricao": "UMA CRIATURA ESTRANHA SAI DA PAREDE, ATRAVES DO SANGUE E PULA NA DIREÇÃO DE VOCÊS. Você é derrubado no chão e seu irmão volta correndo para o corredor",
+	"opcao": [
+    	{	"comando": "1. Voltar para o corredor",
+			"resultado": "Você se recupera rápidamente e volta para o corredor",
+		 	"chave": "corredor_3"
+		 }
+		 
+			 ]	
+	
+},
+
+{
+	"nome": "corredor_3",
+	"descricao": "Ao voltar para o corredor, a criatura estava agoniando no chão, seu irmão aparentemente atirou água na criatura...",
+	"opcao": [
+    	{	"comando": "1.Entrar no banheiro",
+			"resultado": "Você abre a porta e entra no banheiro...",
+		 	"chave": "banheiro_4"
+		 },
+		{	"comando": "2.Entrar no quarto dos pais",
+			"resultado": "a porta ainda está trancada",
+		 	"chave": "nenhum"
+		 },
+	 	{	"comando": "3.Entrar no quarto do irmão",
+			"resultado": "porta trancada...",
+			"chave": "nenhum"
+		},
+		{	"comando": "4.Descer as escadas",
+			"resultado": "Você desce e algo puxa você e seu irmão com muita força para baixo...",
+			"chave": "fim_morte"
+		}
+			 ]	
+	
+},
+
+{
+	"nome": "banheiro_4",
+	"descricao": "A parede continua com muito sangue, será que seus pais está depois daquela 'parede'?...",
+	"opcao": [
+    	{	"comando": "1. olhar no espelho",
+			"resultado": "Seu rosto está coberto de sangue",
+		 	"chave": "nenhum"
+		 },
+		 {	"comando": "2.Entrar pelo portal de sangue",
+			"resultado": "vocês entra pelo portal",
+		 	"chave": "limbo"
+		 }
+		 
+			 ]	
+	
+},
+
+{
+	"nome": "limbo",
+	"descricao": "Aparentemente vocês está no banheiro ainda, só que apenas a parede de onde vieram está limpa, o restante esta todo coberto de sangue. Da para ouvir barulhos estranhos...",
+	"opcao": [
+    	{	"comando": "1. olhar no espelho",
+			"resultado": "Estranho, vocês não possuem reflexo.",
+		 	"chave": "nenhum"
+		 },
+		 {	"comando": "2.Sair do banheiro",
+			"resultado": "Fim da parte I, aguarde pela parte II",
+		 	"chave": "fim_bom"
+		 }
+		 
+			 ]	
+	
+},
+
+{
+	"nome": "fim_morte",
+	"descricao": "OH CÉUS! VOCÊ MORREU!",
+	"opcao": [
+    	{	"comando": "1.Sair do jogo",
+			"resultado": "tente novamente",
+		 	"chave": "final"
+		}	
+			 ]	
+	
+},
+
+{
+	"nome": "fim_bom",
+	"descricao": "Parabéns você sobreviveu a primeira parte...",
+	"opcao": [
+    	{	"comando": "1.Sair do jogo",
+			"resultado": "tente novamente",
+		 	"chave": "final"
+		}	
+			 ]	
+	
 }
+
 ]

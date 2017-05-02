@@ -1,6 +1,6 @@
 #=========== class sala ==============
 class Sala
-	def initialize(descricao,opcao)  						#construtor obj Sala
+	def initialize(descricao,opcao)  					
 		@descricao = descricao
 		@opcao = opcao
 		@visitado = false
@@ -61,8 +61,7 @@ class Control
 		if @atual.get_visitado == false
 			puts @atual.imprime_descricao
 			@atual.set_visitado(true)
-		else
-			puts "Tente outra opção :)\n"
+		
 		end
 		puts "O que deseja fazer?"
 		for @i in (0..@aux)			
@@ -71,8 +70,7 @@ class Control
 
 		print "Digite uma opção: "
 		@valor = gets
-		#print "\nvocê escolhe a opcão #{@valor}"
-
+		
 		@opc[@valor.to_i - 1].print_resultado
 		@x = @opc[@valor.to_i - 1].get_chave
 		
@@ -86,9 +84,51 @@ class Control
 
 	def generate_dot(data_hash)
 		@data_hash = data_hash
+		@tam = @data_hash.size - 1
 		arq = File.new("graphviz.txt", "w")
-		arq.puts ("digraph g {\ngraph [\nrankdir = \"LR\"\n];\nnode [\nfontsize = \"16\"\nshape = \"ellipse\"\n];\nedge [\n];")
+		arq.puts ("digraph g {\ngraph [\nrankdir = \"LR\"\n];\nnode [\nfontsize = \"16\"\nshape = \"ellipse\"\n];\nedge [\n];\n")
 
+		for i in (0..@tam)
+			arq.puts("\"node#{i}\" [\n")
+			arq.print ("label = \"")
+			arq.print ("<f#{0}> #{@data_hash[i]["nome"]} |")
+			for j in (0..data_hash[i]["opcao"].size - 1)				
+				arq.print("<f#{j+1}> #{@data_hash[i]["opcao"][j]["comando"]} ")
+				if j < data_hash[i]["opcao"].size - 1
+					arq.print ("|")
+				end 
+			end
+				arq.print("\"\nshape = \"record\"\n];\n")
+		end
+
+		count = 0
+
+		for i in (0..@tam)			
+			for j in (0..data_hash[i]["opcao"].size - 1)
+				if @data_hash[i]["opcao"][j]["chave"] != "nenhum"
+					arq.print("\"node#{i}\": ")
+					k = get_index_next(@data_hash[i]["opcao"][j]["chave"], @data_hash)
+					arq.print("f#{j+1} -> \"node#{k}\":f0 [\n")
+					arq.print("id = #{count}\n];\n")
+					count = count + 1
+				end
+			end
+		end
+		arq.print("}")
+
+	end
+
+	def get_index_next(key, data_hash)
+		@key = key
+		@data_hash = data_hash
+		@tam = @data_hash.size - 1
+
+
+		for i in (0..@tam)
+			if key == data_hash[i]["nome"]
+				return i
+			end
+		end
 	end
 end
 
@@ -97,7 +137,7 @@ end
 salas = Hash.new
 ctrl = Control.new
 Process.spawn("mocp -o Repeat 0.mp3")
-Process.spawn("mocp -l 0.mp3") #mocp -l passar arquivo para tocar
+Process.spawn("mocp -l 0.mp3")
 
 
 
@@ -121,17 +161,12 @@ for j in (0..tam)
 	salas.store(data_hash[j]["nome"], room)
 	
 end
-	#puts "#{arr}"
-
-#puts salas["sala_1"].get_opc[2].print_comando
-
-
 
 key = data_hash[0]["nome"]
 
-for k in (0..2)	#while != end
-	key = ctrl.imprime_sala(salas, key)
 
+while key != "final"
+	key = ctrl.imprime_sala(salas, key)
 end
 
 ctrl.generate_dot(data_hash)
